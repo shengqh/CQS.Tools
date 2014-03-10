@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FileTemplate>
+  <Name>clinical_patient_brca</Name>
+  <Property>bcr_patient_barcode</Property>
+  <Property>breast_carcinoma_estrogen_receptor_status</Property>
+  <Property>breast_carcinoma_progesterone_receptor_status</Property>
+  <Property>lab_proc_her2_neu_immunohistochemistry_receptor_status</Property>
+  <Property>vital_status</Property>
+  <Property>days_to_death</Property>
+  <Property>days_to_last_followup</Property>
+  <Property>days_to_last_known_alive</Property>
+  <Property></Property>
+</FileTemplate>
