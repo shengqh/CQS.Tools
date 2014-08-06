@@ -20,6 +20,8 @@ using RCPA.Gui.Command;
 using RCPA.Utils;
 using CQS.Genome.QC;
 using CQS.Genome.Tophat;
+using CQS.Genome.Bacteria.Rockhopper;
+using CQS.Genome.Depth;
 
 namespace CQS
 {
@@ -69,6 +71,12 @@ namespace CQS
         new FastqTrimmerCommand(),
         new BamSummaryBuilderCommand(),
         new TophatSummaryBuilderCommand(),
+        new FastqDemultiplexProcessorCommand(),
+        new RockhopperSummaryBuilderCommand(),
+        new AlleleCountBuilderCommand(),
+        new DepthProcessorCommand(),
+        new ChromosomeCountProcessorCommand(),
+        new ChromosomeCountTableBuilderCommand()
       }.ToDictionary(m => m.Name.ToLower());
 
       if (!SystemUtils.IsLinux && args.Length == 0)
@@ -101,9 +109,16 @@ namespace CQS
         }
         else if (commands.TryGetValue(args[0].ToLower(), out command))
         {
-          if (command.Process(args.Skip(1).ToArray()))
+          try
           {
-            Console.WriteLine("Done!");
+            if (command.Process(args.Skip(1).ToArray()))
+            {
+              Console.WriteLine("Done!");
+            }
+          }
+          catch (Exception ex)
+          {
+            Console.Error.WriteLine("Failed : " + ex.StackTrace);
           }
         }
         else
