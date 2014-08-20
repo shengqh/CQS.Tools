@@ -131,11 +131,12 @@ namespace CQS
 
     private static void ShowUsage(Dictionary<string, ICommandLineCommand> commands)
     {
-      Console.WriteLine(Constants.GetSqhVanderbiltTitle(ThisAssembly.Title, ThisAssembly.Version));
+      Console.WriteLine(Constants.GetSqhVanderbiltTitle(CQSToolsAssembly.Title, CQSToolsAssembly.Version));
       Console.WriteLine("Those commands are available :");
       (from c in commands.Values
         orderby c.Name
         select "\t" + c.Name + "\t" + c.Description).ToList().ForEach(Console.WriteLine);
     }
   }
+
 }

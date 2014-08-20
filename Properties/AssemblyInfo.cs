@@ -5,12 +5,12 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using CQS.Properties;
 
-[assembly: AssemblyTitle(ThisAssembly.Title)]
+[assembly: AssemblyTitle(CQSToolsAssembly.Title)]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany(ThisAssembly.Company)]
-[assembly: AssemblyProduct(ThisAssembly.Title)]
-[assembly: AssemblyCopyright(ThisAssembly.Copyright)]
+[assembly: AssemblyCompany(CQSToolsAssembly.Company)]
+[assembly: AssemblyProduct(CQSToolsAssembly.Title)]
+[assembly: AssemblyCopyright(CQSToolsAssembly.Copyright)]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -35,5 +35,5 @@ using CQS.Properties;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion(ThisAssembly.Version)]
-[assembly: AssemblyFileVersion(ThisAssembly.InformationalVersion)]
+[assembly: AssemblyVersion(CQSToolsAssembly.Version)]
+[assembly: AssemblyFileVersion(CQSToolsAssembly.InformationalVersion)]

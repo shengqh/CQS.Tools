@@ -26,7 +26,7 @@ namespace CQS.Tools
     {
       InitializeComponent();
 
-      this.Text = Constants.GetSqhVanderbiltTitle(ThisAssembly.Title, ThisAssembly.Version);
+      this.Text = Constants.GetSqhVanderbiltTitle(CQSToolsAssembly.Title, CQSToolsAssembly.Version);
 
       //AddCommand(new MicroarrayDataSummaryBuilderUI.Command());
 
