@@ -138,5 +138,4 @@ namespace CQS
         select "\t" + c.Name + "\t" + c.Description).ToList().ForEach(Console.WriteLine);
     }
   }
-
 }
