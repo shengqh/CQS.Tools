@@ -30,7 +30,7 @@ if(nrow(level0) > 0){
   barX<-barplot(level0$Count,  space=0.5, names.arg=level0$Category, mar=c(10,10,10,10), col=rainbow(nrow(level0)))
   text(x=barX, y=level0$Count+par("cxy")[2], level0$Count, xpd=TRUE) 
   mtext("Counts", side=2, line=4, at=max(level0$Count)/2, cex=1.5, las=0)
-  par(mar=c(2,0,2,8))
+  par(mar=c(4,2,4,10))
   pie(cv, labels = lbls, col=rainbow(length(lbls)), cex=0.8)
   par(oma=c(2,2,5,2)) 
   title(main = catname, outer = TRUE, cex.main = 3)

@@ -22,6 +22,7 @@ using CQS.Genome.QC;
 using CQS.Genome.Tophat;
 using CQS.Genome.Bacteria.Rockhopper;
 using CQS.Genome.Depth;
+using CQS.Genome.Gwas;
 
 namespace CQS
 {
@@ -63,7 +64,6 @@ namespace CQS
         new MappedPositionBuilderCommand(),
         new Gtf2BedGeneIdBuilderCommand(),
         new Bed2FastaProcessorCommand(),
-        new SmallRNACategoryBuilderCommand(),
         new SmallRNACategoryGroupBuilderCommand(),
         new AnnovarResultMultipleToOneBuilderCommand(),
         new DistinctMappedReadProcessorCommand(),
@@ -76,9 +76,13 @@ namespace CQS
         new AlleleCountBuilderCommand(),
         new DepthProcessorCommand(),
         new ChromosomeCountProcessorCommand(),
-        new ChromosomeCountTableBuilderCommand()
+        new ChromosomeCountTableBuilderCommand(),
+        new MirnaNonTemplatedNucleotideAdditionsQueryBuilderCommand(),
+        new MirnaNTACountTableBuilderCommand(),
+        new MappedReadBuilderCommand(),
+        new Impute2ResultDistillerCommand()
       }.ToDictionary(m => m.Name.ToLower());
-
+      
       if (!SystemUtils.IsLinux && args.Length == 0)
       {
         Application.EnableVisualStyles();

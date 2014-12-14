@@ -3,8 +3,7 @@
   <Name>clinical_patient_brca</Name>
   <Property>bcr_patient_barcode</Property>
   <Property>vital_status</Property>
-  <Property>days_to_death</Property>
-  <Property>days_to_last_followup</Property>
-  <Property>days_to_last_known_alive</Property>
+  <Property>death_days_to</Property>
+  <Property>last_contact_days_to</Property>
   <Property></Property>
 </FileTemplate>
