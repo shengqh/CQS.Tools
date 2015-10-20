@@ -42,7 +42,7 @@ for(file in files){
   png(paste0(file, ".png"), width=8000, height=6000, res=300)
   plot(fp$Position, fp$Index, pch=19, cex=fp$Percentage, xlim=c(-30, 120), col=fp$Color, xlab="Position", ylab="Name and Count", yaxt="n", bty="n", xaxt="n", main=file)
   axis(side=1, at=c(-10:120), las=2)
-  lines(x=c(1,1), y=c(0, nrow(fm)),col="blue")
+  lines(x=c(0,0), y=c(0, nrow(fm)),col="blue")
   text(rep(-28,nrow(fm)), index, tnames, adj=c(0,0.5))
   dev.off()
 }

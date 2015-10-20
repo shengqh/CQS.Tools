@@ -1,6 +1,6 @@
 #predefine_start
-catfile<-"H:/shengquanhu/projects/vangard/VANGARD00055_guoyan_mirna_v2/rat/topN_bowtie1_genome_cutadapt_1mm_count_smallRNA_category/result/Rat_HDL_diabetes.catcount"
-outputdir<-"H:/shengquanhu/projects/vangard/VANGARD00055_guoyan_mirna_v2/rat/topN_bowtie1_genome_cutadapt_1mm_count_smallRNA_category/result/"
+catfile<-"H:/shengquanhu/projects/vickers/20150219_smallRNA_3018-KCV-9_human/bowtie1_genome_1mm_NTA_smallRNA_category/result/3018-KCV-9.catcount"
+outputdir<-"H:/shengquanhu/projects/vickers/20150219_smallRNA_3018-KCV-9_human/bowtie1_genome_1mm_NTA_smallRNA_category/result/"
 ispdf<-0
 #predefine_end
 
@@ -12,6 +12,7 @@ sampleNames = unique(allcounts$SampleName)
 
 #individual barplot and pie chart
 for(sampleName in sampleNames){
+  #sampleName<-sampleNames[1]
   print(sampleName)
   
   counts<-allcounts[allcounts$SampleName == sampleName,]
@@ -22,7 +23,9 @@ for(sampleName in sampleNames){
   repc<-c(1:categoryCount)
   level2$Category <- factor(repc, labels=as.character(level2$Category), levels = c(1:categoryCount))
   
-  cv<-level2[level2$Count > 0,,drop=F]
+  cv<-level2
+  cv$Color<-rainbow(nrow(cv))
+  cv<-cv[cv$Count > 0,,drop=F]
   
   haspie<-nrow(cv) > 0
   hasbar<-nrow(level0) > 0
@@ -57,8 +60,8 @@ for(sampleName in sampleNames){
     lbls<-cv$Category
     pct<-round(cv$Count/sum(cv$Count)*10000) / 100
     lbls<-paste0(lbls, " ", pct, "%") # add percents to labels 
-    par(mar=c(2,0,2,8))
-    pie(cv$Count, labels = lbls, col=rainbow(length(lbls)), cex=0.8)
+    par(mar=c(2,2,2,8))
+    pie(cv$Count, labels = lbls, col=cv$Color, cex=0.8)
   }
   par(oma=c(2,2,5,2)) 
   title(main = catname, outer = TRUE, cex.main = 3)

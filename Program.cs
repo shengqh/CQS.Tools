@@ -23,6 +23,12 @@ using CQS.Genome.Tophat;
 using CQS.Genome.Bacteria.Rockhopper;
 using CQS.Genome.Depth;
 using CQS.Genome.Gwas;
+using CQS.Genome.Plink;
+using RCPA.Commandline;
+using CQS.Microarray;
+using CQS.Genome.Quantification;
+using CQS.Genome.Parclip;
+using CQS.Genome.Vcf;
 
 namespace CQS
 {
@@ -41,9 +47,10 @@ namespace CQS
     {
       var commands = new ICommandLineCommand[]
       {
-        new MirnaCountProcessorCommand(),
+        //new MirnaCountProcessorCommand(),
         new TCGATreeBuilderCommand(),
         new TCGADataDownloaderCommand(),
+        new GseMatrixDownloaderCommand(),
         new FastqLengthDistributionBuilderCommand(),
         new AlignmentResultCleanerCommand(),
         new IdenticalQueryBuilderCommand(),
@@ -54,11 +61,11 @@ namespace CQS
         new ReadGroupTrackingExtractorCommand(),
         new TCGADatatableBuilderCommand(),
         new Bam2FastqProcessorCommand(),
-        new MirnaMappedOverlapBuilderCommand(),
+        //new MirnaMappedOverlapBuilderCommand(),
         new DataTableBuilderCommand(),
         new GtfGeneIdGeneNameMapBuilderCommand(),
         new PileupCountBuilderCommand(),
-        new MirnaDataTableBuilderCommand(),
+        //new MirnaDataTableBuilderCommand(),
         new MappedCountProcessorCommand(),
         new MappedCountTableBuilderCommand(),
         new MappedPositionBuilderCommand(),
@@ -78,11 +85,33 @@ namespace CQS
         new ChromosomeCountProcessorCommand(),
         new ChromosomeCountTableBuilderCommand(),
         new MirnaNonTemplatedNucleotideAdditionsQueryBuilderCommand(),
-        new MirnaNTACountTableBuilderCommand(),
+        new TrnaNonTemplatedNucleotideAdditionsQueryBuilderCommand(),
+        new TGIRTCountProcessorCommand(),
+        //new MirnaNTACountTableBuilderCommand(),
         new MappedReadBuilderCommand(),
-        new Impute2ResultDistillerCommand()
+        new Impute2ResultDistillerCommand(),
+        new SmallRNADatabaseBuilderCommand(),
+        new SmallRNACountProcessorCommand(),
+        new SmallRNACountTableBuilderCommand(),
+        new PlinkStrandFlipProcessorCommand(),
+        new SmallRNAUnmappedReadBuilderCommand(),
+        new HTSeqCountToFPKMCalculatorCommand(),
+        new ParclipSmallRNAT2CBuilderCommand(),
+        new ParclipMiRNATargetBuilderCommand(),
+        new FastQCSummaryBuilderCommand(),
+        new BamCleanerCommand(),
+        new SmallRNASequenceCountTableBuilderCommand(),
+        new SeedTargetBuilderCommand(),
+        new BedSorterOptionsCommand(),
+        new VcfSlimProcessorCommand(),
+        new VcfGenotypeTableBuilderCommand(),
+        new VcfFilterProcessorCommand(),
+        new RestoreCCABuilderCommand(),
+        new GvcfValidationProcessorCommand(),
+        new ValidFastqExtractorCommand(),
+        new SmallRNAT2CMutationSummaryBuilderCommand()
       }.ToDictionary(m => m.Name.ToLower());
-      
+
       if (!SystemUtils.IsLinux && args.Length == 0)
       {
         Application.EnableVisualStyles();
@@ -106,6 +135,8 @@ namespace CQS
           AttachConsole(AttachParentProcess);
         }
 
+        //Console.WriteLine("Current system = " + SystemUtils.CurrentSystem.ToString());
+
         ICommandLineCommand command;
         if (args.Length == 0)
         {
@@ -113,16 +144,9 @@ namespace CQS
         }
         else if (commands.TryGetValue(args[0].ToLower(), out command))
         {
-          try
+          if (command.Process(args.Skip(1).ToArray()))
           {
-            if (command.Process(args.Skip(1).ToArray()))
-            {
-              Console.WriteLine("Done!");
-            }
-          }
-          catch (Exception ex)
-          {
-            Console.Error.WriteLine("Failed : " + ex.StackTrace);
+            Console.WriteLine("Done!");
           }
         }
         else
@@ -138,8 +162,8 @@ namespace CQS
       Console.WriteLine(Constants.GetSqhVanderbiltTitle(CQSToolsAssembly.Title, CQSToolsAssembly.Version));
       Console.WriteLine("Those commands are available :");
       (from c in commands.Values
-        orderby c.Name
-        select "\t" + c.Name + "\t" + c.Description).ToList().ForEach(Console.WriteLine);
+       orderby c.Name
+       select "\t" + c.Name + "\t" + c.Description).ToList().ForEach(Console.WriteLine);
     }
   }
 }

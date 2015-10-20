@@ -24,6 +24,19 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20150921| v1.6.2|New feature: smallrna_t2c_summary|
+|20150915| v1.6.1|New feature: fastq_valid_extractor|
+|20150910| v1.6.0|Update:tgirt_checkcca, tgirt_nta, tgirt_count|
+|20150804| v1.5.9|New feature: fastq_trna: trimming CCA/CCAA from tRNA reads|
+|20150429| v1.5.8|New feature: SmallRNA identical sequence count table builder|
+|20150407| v1.5.7|New feature: Build summary of FastQC result|
+|20150316| v1.5.6|New feature: Convert HTSeq count to FPKM|
+|20150312| v1.5.5|New feature: GSE Matrix File Downloader|
+|20150309| v1.5.4|Enhanced: gtf_buildmap will generate gene length based on exon|
+|20150305| v1.5.3|Enhanced: fastq_trimmer supports pair-end data|
+|20150303| v1.5.2|Enhanced: smallRNA counting: limit mismatch and length for reads mapped to lincRNA|
+|20150210| v1.5.1|New feature: flip plink file by dbsnp and 1000 genome|
+|20150114| v1.5.0|New feature: build smallRNA database|
 |20141124| v1.4.9|New feature: impute2_distiller: extract target SNP from impute2 result|
 |20141103| v1.4.8|New feature: unmapped_reads: extract unmapped read information|
 |20141023| v1.4.7|Enhanced: mirna_nta_table: summerize miRNA count based on NTA and offset|
