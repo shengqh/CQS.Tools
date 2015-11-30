@@ -17,7 +17,7 @@ namespace CQS.Properties
     public const string Author = "Quanhu SHENG (quanhu.sheng@vanderbilt.edu/shengqh@gmail.com)";
     public const string Company = "Center for Quantitative Sciences/VUMC";
     public const string Copyright = "Copyright (C) 2013-2015 " + Company;
-    public const string Version = "1.6.3";
+    public const string Version = "1.6.4";
     public const string InformationalVersion = Version;
   }
 }

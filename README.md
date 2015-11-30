@@ -24,6 +24,9 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20151105| v1.6.4|Bug fixed: smallrna_count: the total read count will be taken from count file when bam file contains mapped reads only
+|||enhanced: fastq_identical: output query in order of count in dupcount file|
+|20151030| v1.6.3|New feature: database_reorder|
 |20150921| v1.6.2|New feature: smallrna_t2c_summary|
 |20150915| v1.6.1|New feature: fastq_valid_extractor|
 |20150910| v1.6.0|Update:tgirt_checkcca, tgirt_nta, tgirt_count|

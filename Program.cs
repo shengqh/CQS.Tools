@@ -29,6 +29,7 @@ using CQS.Microarray;
 using CQS.Genome.Quantification;
 using CQS.Genome.Parclip;
 using CQS.Genome.Vcf;
+using CQS.Genome.Database;
 
 namespace CQS
 {
@@ -109,7 +110,8 @@ namespace CQS
         new RestoreCCABuilderCommand(),
         new GvcfValidationProcessorCommand(),
         new ValidFastqExtractorCommand(),
-        new SmallRNAT2CMutationSummaryBuilderCommand()
+        new SmallRNAT2CMutationSummaryBuilderCommand(),
+        new DatabaseReorderProcessorCommand()
       }.ToDictionary(m => m.Name.ToLower());
 
       if (!SystemUtils.IsLinux && args.Length == 0)
