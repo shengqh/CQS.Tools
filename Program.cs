@@ -98,7 +98,7 @@ namespace CQS
         new SmallRNAUnmappedReadBuilderCommand(),
         new HTSeqCountToFPKMCalculatorCommand(),
         new ParclipSmallRNAT2CBuilderCommand(),
-        new ParclipMiRNATargetBuilderCommand(),
+        new ParclipSmallRNATargetBuilderCommand(),
         new FastQCSummaryBuilderCommand(),
         new BamCleanerCommand(),
         new SmallRNASequenceCountTableBuilderCommand(),
@@ -111,7 +111,8 @@ namespace CQS
         new GvcfValidationProcessorCommand(),
         new ValidFastqExtractorCommand(),
         new SmallRNAT2CMutationSummaryBuilderCommand(),
-        new DatabaseReorderProcessorCommand()
+        new DatabaseReorderProcessorCommand(),
+        new SmallRNABamInfoFixerCommand()
       }.ToDictionary(m => m.Name.ToLower());
 
       if (!SystemUtils.IsLinux && args.Length == 0)
