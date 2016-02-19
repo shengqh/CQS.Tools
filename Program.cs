@@ -112,7 +112,8 @@ namespace CQS
         new ValidFastqExtractorCommand(),
         new SmallRNAT2CMutationSummaryBuilderCommand(),
         new DatabaseReorderProcessorCommand(),
-        new SmallRNABamInfoFixerCommand()
+        new SmallRNABamInfoFixerCommand(),
+        new SamExtractorCommand()
       }.ToDictionary(m => m.Name.ToLower());
 
       if (!SystemUtils.IsLinux && args.Length == 0)

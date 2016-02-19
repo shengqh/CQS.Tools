@@ -83,7 +83,7 @@ sampleCount = length(sampleNames)
 repc<-rep(c(1:categoryCount), sampleCount)
 gcounts$Category <- factor(repc, labels=as.character(gcounts$Category)[1:categoryCount], levels = c(1:3))
 
-g<-qplot(SampleName, y=Count, data=gcounts, geom="bar", fill=Category, stat="identity") + 
+g<-ggplot(gcounts,aes(x=SampleName, y=Count,fill=Category))+geom_bar(stat="identity")+
   theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5)) + 
   theme(legend.position = "top")
 print(g)

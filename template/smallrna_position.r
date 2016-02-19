@@ -5,7 +5,7 @@ files=unique(positions$File)
 
 cols=c(rgb(139, 35, 35, 0,maxColorValue=255), 
        rgb(139, 35, 35, 255*0.2,maxColorValue=255), 
-       rgb(139, 35, 35,, 255*0.4,maxColorValue=255), 
+       rgb(139, 35, 35, 255*0.4,maxColorValue=255), 
        rgb(139, 35, 35,255*0.6,maxColorValue=255), 
        rgb(139, 35, 35,255*0.8,maxColorValue=255), 
        rgb(139, 35, 35,255,maxColorValue=255))
