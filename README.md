@@ -24,6 +24,7 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20160226| v1.6.8|New feature: bam_sequence_count_table: build sequence count table from bam files and count files
 |20160215| v1.6.7|Enhanced: smallRNA count/chromosome count
 |20151222| v1.6.6|Enhanced: file_def can automatically adjust the name (for example, CMS-1 and CMS-123, CMS-1 will be auto filled as CMS-001).
 |20151203| v1.6.5|Bug fixed: smallrna_count: the NTA reads will not be summed to total count when bam file contains mapped reads only. A tool smallrna_baminfo_fix can be used to fix old info files.
