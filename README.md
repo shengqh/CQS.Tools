@@ -13,6 +13,16 @@ CQS bioinformatics software suite (cqstools) contains a bunch of tools used in g
 <a name="Prerequisites"/>
 #Prerequisites
 Although cqstools is developed by C#, it is majorly executed under linux through [mono] (https://github.com/mono/mono). So mono on your linux system is required for cqstools.
+For people who doesn't have root permission to install mono, you may install mono into your own directory:
+```
+wget https://github.com/mono/mono/archive/mono-4.4.0.40.tar.gz
+tar -xzvf mono-4.4.0.40.tar.gz
+cd mono-mono-4.4.0.40
+./autogen.sh
+./configure --prefix=/scratch/cqs/shengq1/mono4           #here, I will install mono to my own directory /scratch/cqs/shengq1/mono4, change it to your directory
+make
+make install
+```
 
 <a name="Installation"/>
 #Installation
@@ -24,6 +34,9 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20160311| v1.6.11|Enhanced: chromosome_count: add namePattern as option for parsing category name from chromosome name.
+|20160303| v1.6.10|Enhanced: smallrna_database: ignore the smallRNA coordinates in ensembl gtf file which don't locate in major chromosomes (for example, 1..22, X,Y,MT).
+|20160302| v1.6.9|Bug fixed: chromosome_count
 |20160226| v1.6.8|New feature: bam_sequence_count_table: build sequence count table from bam files and count files
 |20160215| v1.6.7|Enhanced: smallRNA count/chromosome count
 |20151222| v1.6.6|Enhanced: file_def can automatically adjust the name (for example, CMS-1 and CMS-123, CMS-1 will be auto filled as CMS-001).
