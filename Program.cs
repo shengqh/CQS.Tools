@@ -30,6 +30,8 @@ using CQS.Genome.Quantification;
 using CQS.Genome.Parclip;
 using CQS.Genome.Vcf;
 using CQS.Genome.Database;
+using RCPA;
+using CQS.Genome.CNV;
 
 namespace CQS
 {
@@ -114,8 +116,12 @@ namespace CQS
         new DatabaseReorderProcessorCommand(),
         new SmallRNABamInfoFixerCommand(),
         new SamExtractorCommand(),
-        new SequenceCountTableBuilderCommand()
+        new SequenceCountTableBuilderCommand(),
+        new CnMOPSCallProcessorCommand()
       }.ToDictionary(m => m.Name.ToLower());
+
+      SoftwareInfo.SoftwareName = CQSToolsAssembly.Name;
+      SoftwareInfo.SoftwareVersion = CQSToolsAssembly.Version;
 
       if (!SystemUtils.IsLinux && args.Length == 0)
       {

@@ -13,14 +13,15 @@ CQS bioinformatics software suite (cqstools) contains a bunch of tools used in g
 <a name="Prerequisites"/>
 #Prerequisites
 Although cqstools is developed by C#, it is majorly executed under linux through [mono] (https://github.com/mono/mono). So mono on your linux system is required for cqstools.
-For people who doesn't have root permission to install mono, you may install mono into your own directory:
+For people who doesn't have root permission to install mono, you may install mono into your own directory and add the bin directory of that installed directory into your path enviroment:
 ```
 wget https://github.com/mono/mono/archive/mono-4.4.0.40.tar.gz
 tar -xzvf mono-4.4.0.40.tar.gz
 cd mono-mono-4.4.0.40
-./autogen.sh
-./configure --prefix=/scratch/cqs/shengq1/mono4           #here, I will install mono to my own directory /scratch/cqs/shengq1/mono4, change it to your directory
-make
+#here, I will install mono to my own directory /scratch/cqs/shengq1/mono4, change it to your directory
+./autogen.sh --prefix=/scratch/cqs/shengq1/mono4 --with-large-heap=yes --with-ikvm-native=no --disable-shared-memory --enable-big-arrays
+make get-monolite-latest
+make EXTERNAL_MCS=${PWD}/mcs/class/lib/monolite/basic.exe
 make install
 ```
 
@@ -34,6 +35,16 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20160822| v1.6.17|Enhanced: chromosome_count: add outputSequence option.
+|||Enhanced: data_table: add option to not generate FPKM table.
+|||Enhanced: chromosome_table: add option to output read contig table.
+|||Enhanced: export snoRNA and snRNA percentage based position coverage image.
+|20160822| v1.6.16|Enhanced: cnmops_merge: export cnvr file for depth visualization using ngsperl.
+|||Enhanced: data_table: export feature_name just before count table.
+|20160630| v1.6.15|Enhanced: chromosome_count: add KeepChrInName option.
+|20160516| v1.6.14|Enhanced: smallrna_sequence_count_table: group the top reads based on sequence similarity. The reads with more than 90% overlap will be merged as group.
+|20160510| v1.6.13|New feature: cnmops_merge: merge overlapped Cn.MOPS calls.
+|20160405| v1.6.12|Enhanced: smallrna_count: buf fix for parsing aminoacid from some tRNA names.
 |20160311| v1.6.11|Enhanced: chromosome_count: add namePattern as option for parsing category name from chromosome name.
 |20160303| v1.6.10|Enhanced: smallrna_database: ignore the smallRNA coordinates in ensembl gtf file which don't locate in major chromosomes (for example, 1..22, X,Y,MT).
 |20160302| v1.6.9|Bug fixed: chromosome_count
