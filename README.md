@@ -35,6 +35,10 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20161202| v1.6.18|Enhanced: smallrna_sequence_count_table: group the top reads based on sequence similarity. The reads can be extended by maximum number of base per iteration.
+|||Enhanced: smallrna_sequence_count_table: add option to extract specific sequences only.
+|||Bugfix: chromosome_count_table: count error for read table. Failed when reading empty xml file.
+|||Bugfix: chromosome_count_table: output sequence error for read mapped to reverse strand.
 |20160822| v1.6.17|Enhanced: chromosome_count: add outputSequence option.
 |||Enhanced: data_table: add option to not generate FPKM table.
 |||Enhanced: chromosome_table: add option to output read contig table.
