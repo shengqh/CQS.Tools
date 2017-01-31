@@ -35,6 +35,9 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20161213| v1.7.0|Enhanced: smallrna_count: consider tRNA non-templated addition in smallRNA counting.
+|||Removed: FastqTrimmer: C# gzip library is not compatible with Gzip format from illumina, so this function may failed.
+|||Bugfix: smallrna_count_table: underestimated the read count whose sequence may belongs to multiple queries (maybe one from original and another from NTA) in read count table
 |20161202| v1.6.18|Enhanced: smallrna_sequence_count_table: group the top reads based on sequence similarity. The reads can be extended by maximum number of base per iteration.
 |||Enhanced: smallrna_sequence_count_table: add option to extract specific sequences only.
 |||Bugfix: chromosome_count_table: count error for read table. Failed when reading empty xml file.
