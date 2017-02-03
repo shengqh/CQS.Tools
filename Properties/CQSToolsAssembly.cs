@@ -17,8 +17,8 @@ namespace CQS.Properties
     public const string Title = "Bioinformatics Tool Suite";
     public const string Author = "Quanhu SHENG (quanhu.sheng@vanderbilt.edu/shengqh@gmail.com)";
     public const string Company = "Center for Quantitative Sciences/VUMC";
-    public const string Copyright = "Copyright (C) 2013-2016 " + Company;
-    public const string Version = "1.7.0";
+    public const string Copyright = "Copyright (C) 2013-2017 " + Company;
+    public const string Version = "1.7.1";
     public const string InformationalVersion = Version;
   }
 }

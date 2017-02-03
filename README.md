@@ -35,6 +35,8 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20170203| v1.7.1|Enhanced: smallrna_count: consider yRNA, snRNA, snoRNA and rRNA individually.
+|||Enhanced: smallrna_count_table: output position files for each smallRNA category.
 |20161213| v1.7.0|Enhanced: smallrna_count: consider tRNA non-templated addition in smallRNA counting.
 |||Removed: FastqTrimmer: C# gzip library is not compatible with Gzip format from illumina, so this function may failed.
 |||Bugfix: smallrna_count_table: underestimated the read count whose sequence may belongs to multiple queries (maybe one from original and another from NTA) in read count table
