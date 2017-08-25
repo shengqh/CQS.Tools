@@ -6,13 +6,11 @@ CQS Bioinformatics Software Suite
 * [Changes](#changes)
 
 <a name="Introduction"/>
-
 #Introduction
 
 CQS bioinformatics software suite (cqstools) contains a bunch of tools used in genomics research, from preprocessing, format conversion, counting, summarizing to annotation, et al.
 
 <a name="Prerequisites"/>
-
 #Prerequisites
 
 Although cqstools is developed by C#, it is majorly executed under linux through [mono] (https://github.com/mono/mono). So mono on your linux system is required for cqstools.
@@ -30,7 +28,6 @@ make install
 ```
 
 <a name="Installation"/>
-
 #Installation
 
 ###Binary File
@@ -38,7 +35,6 @@ make install
 User can download compiled version from [github](https://github.com/shengqh/CQS.Tools/releases). Download the file and decompress it to any folder you want, run "mono cqstools.exe" and have fun.
 
 <a name="Changes"/>
-
 #Changes
 
 |Date|Version|Description|
