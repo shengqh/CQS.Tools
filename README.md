@@ -35,6 +35,10 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20170714| v1.7.5|Enhanced: chromosome_count can accept chromosome pattern.
+|20170628| v1.7.4|Bugfix: parsing star mismatch with 'nM:i' tag.
+|20170222| v1.7.3|Enhanced: gtf2bed can use "Name" as key.
+|20170211| v1.7.2|Enhanced: smallrna_sequence_count_table: set exportContigDetails option to save time in large scale dataset.
 |20170203| v1.7.1|Enhanced: smallrna_count: consider yRNA, snRNA, snoRNA and rRNA individually.
 |||Enhanced: smallrna_count_table: output position files for each smallRNA category.
 |20161213| v1.7.0|Enhanced: smallrna_count: consider tRNA non-templated addition in smallRNA counting.
