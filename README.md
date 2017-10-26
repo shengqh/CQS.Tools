@@ -12,8 +12,10 @@ CQS bioinformatics software suite (cqstools) contains a bunch of tools used in g
 
 <a name="Prerequisites"/>
 #Prerequisites
+
 Although cqstools is developed by C#, it is majorly executed under linux through [mono] (https://github.com/mono/mono). So mono on your linux system is required for cqstools.
 For people who doesn't have root permission to install mono, you may install mono into your own directory and add the bin directory of that installed directory into your path enviroment:
+
 ```
 wget https://github.com/mono/mono/archive/mono-4.4.0.40.tar.gz
 tar -xzvf mono-4.4.0.40.tar.gz
@@ -27,8 +29,10 @@ make install
 
 <a name="Installation"/>
 #Installation
+
 ###Binary File
-User can download compiled version from [github](https://github.com/shengqh/CQS.Tools/releases). Download the file and decompress it to any folder you want, run "mono CQS.Tools.exe" and have fun.
+
+User can download compiled version from [github](https://github.com/shengqh/CQS.Tools/releases). Download the file and decompress it to any folder you want, run "mono cqstools.exe" and have fun.
 
 <a name="Changes"/>
 #Changes
