@@ -39,6 +39,7 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20171128| v1.7.6|Enhanced: output genome reads and too short reads for smallRNA counting.
 |20170714| v1.7.5|Enhanced: chromosome_count can accept chromosome pattern.
 |20170628| v1.7.4|Bugfix: parsing star mismatch with 'nM:i' tag.
 |20170222| v1.7.3|Enhanced: gtf2bed can use "Name" as key.
