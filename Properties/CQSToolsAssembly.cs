@@ -15,10 +15,10 @@ namespace CQS.Properties
   {
     public const string Name = "cqstools";
     public const string Title = "Bioinformatics Tool Suite";
-    public const string Author = "Quanhu SHENG (quanhu.sheng@vanderbilt.edu/shengqh@gmail.com)";
+    public const string Author = "Quanhu SHENG (quanhu.sheng.1@vanderbilt.edu/shengqh@gmail.com)";
     public const string Company = "Center for Quantitative Sciences/VUMC";
-    public const string Copyright = "Copyright (C) 2013-2017 " + Company;
-    public const string Version = "1.7.6";
+    public const string Copyright = "Copyright (C) 2013-2018 " + Company;
+    public const string Version = "1.7.7";
     public const string InformationalVersion = Version;
   }
 }

@@ -141,7 +141,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Content Include="readme.txt" />
     <Content Include="template\clinical_patient_brca.header.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
