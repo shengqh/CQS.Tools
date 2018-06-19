@@ -39,6 +39,8 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20180619| v1.7.9|Enhanced: data_table will export protein_coding genes table.
+|20180515| v1.7.8|Enhanced: smallrna_count can ignore reads in xml file. smallrna_count_table has noCategory option.
 |20180423| v1.7.7|Bugfix: smallRNADatabaseBuilder throw exception for no miRNA database assigned.
 |20171128| v1.7.6|Enhanced: output genome reads and too short reads for smallRNA counting.
 |20170714| v1.7.5|Enhanced: chromosome_count can accept chromosome pattern.
