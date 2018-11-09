@@ -39,6 +39,8 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20181109| v1.8.1|Enhanced: parclip_mirna_target can use smallRNA fasta file as seed source file.
+|20180802| v1.8.0|Bugfix: smallrna_count with no_category option will ignore the reads with NTA. For parclip.
 |20180619| v1.7.9|Enhanced: data_table will export protein_coding genes table.
 |20180515| v1.7.8|Enhanced: smallrna_count can ignore reads in xml file. smallrna_count_table has noCategory option.
 |20180423| v1.7.7|Bugfix: smallRNADatabaseBuilder throw exception for no miRNA database assigned.
