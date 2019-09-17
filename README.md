@@ -39,43 +39,49 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
-|20181109| v1.8.1|Enhanced: parclip_mirna_target can use smallRNA fasta file as seed source file.
-|20180802| v1.8.0|Bugfix: smallrna_count with no_category option will ignore the reads with NTA. For parclip.
-|20180619| v1.7.9|Enhanced: data_table will export protein_coding genes table.
-|20180515| v1.7.8|Enhanced: smallrna_count can ignore reads in xml file. smallrna_count_table has noCategory option.
-|20180423| v1.7.7|Bugfix: smallRNADatabaseBuilder throw exception for no miRNA database assigned.
-|20171128| v1.7.6|Enhanced: output genome reads and too short reads for smallRNA counting.
-|20170714| v1.7.5|Enhanced: chromosome_count can accept chromosome pattern.
-|20170628| v1.7.4|Bugfix: parsing star mismatch with 'nM:i' tag.
-|20170222| v1.7.3|Enhanced: gtf2bed can use "Name" as key.
-|20170211| v1.7.2|Enhanced: smallrna_sequence_count_table: set exportContigDetails option to save time in large scale dataset.
-|20170203| v1.7.1|Enhanced: smallrna_count: consider yRNA, snRNA, snoRNA and rRNA individually.
-|||Enhanced: smallrna_count_table: output position files for each smallRNA category.
-|20161213| v1.7.0|Enhanced: smallrna_count: consider tRNA non-templated addition in smallRNA counting.
-|||Removed: FastqTrimmer: C# gzip library is not compatible with Gzip format from illumina, so this function may failed.
-|||Bugfix: smallrna_count_table: underestimated the read count whose sequence may belongs to multiple queries (maybe one from original and another from NTA) in read count table
-|20161202| v1.6.18|Enhanced: smallrna_sequence_count_table: group the top reads based on sequence similarity. The reads can be extended by maximum number of base per iteration.
-|||Enhanced: smallrna_sequence_count_table: add option to extract specific sequences only.
-|||Bugfix: chromosome_count_table: count error for read table. Failed when reading empty xml file.
-|||Bugfix: chromosome_count_table: output sequence error for read mapped to reverse strand.
-|20160822| v1.6.17|Enhanced: chromosome_count: add outputSequence option.
-|||Enhanced: data_table: add option to not generate FPKM table.
-|||Enhanced: chromosome_table: add option to output read contig table.
-|||Enhanced: export snoRNA and snRNA percentage based position coverage image.
-|20160822| v1.6.16|Enhanced: cnmops_merge: export cnvr file for depth visualization using ngsperl.
-|||Enhanced: data_table: export feature_name just before count table.
-|20160630| v1.6.15|Enhanced: chromosome_count: add KeepChrInName option.
-|20160516| v1.6.14|Enhanced: smallrna_sequence_count_table: group the top reads based on sequence similarity. The reads with more than 90% overlap will be merged as group.
-|20160510| v1.6.13|New feature: cnmops_merge: merge overlapped Cn.MOPS calls.
-|20160405| v1.6.12|Enhanced: smallrna_count: buf fix for parsing aminoacid from some tRNA names.
-|20160311| v1.6.11|Enhanced: chromosome_count: add namePattern as option for parsing category name from chromosome name.
-|20160303| v1.6.10|Enhanced: smallrna_database: ignore the smallRNA coordinates in ensembl gtf file which don't locate in major chromosomes (for example, 1..22, X,Y,MT).
-|20160302| v1.6.9|Bug fixed: chromosome_count
-|20160226| v1.6.8|New feature: bam_sequence_count_table: build sequence count table from bam files and count files
-|20160215| v1.6.7|Enhanced: smallRNA count/chromosome count
-|20151222| v1.6.6|Enhanced: file_def can automatically adjust the name (for example, CMS-1 and CMS-123, CMS-1 will be auto filled as CMS-001).
-|20151203| v1.6.5|Bug fixed: smallrna_count: the NTA reads will not be summed to total count when bam file contains mapped reads only. A tool smallrna_baminfo_fix can be used to fix old info files.
-|20151105| v1.6.4|Bug fixed: smallrna_count: the total read count will be taken from count file when bam file contains mapped reads only
+|20190917| v1.8.5|Enhanced: smallRNATable can export read table with corresponding features.|
+|20190304| v1.8.4|Enhanced: smallRNATable can export tRNA only (for tRH analysis).|
+|20181205| v1.8.3|Enhanced: treat mitochondria tRNA as mt_tRNA category.|
+|||Bug fix: smallrna_database, parsing tRNA name from fasta file (Homo_sapiens_tRNA-Asn-GTT-chr1_KI270713v1_random-2 => random-2, should be tRNA-Asn-GTT-chr1_KI270713v1_random-2)|
+|20181128| v1.8.2|Bugfix: fix the problem when the chrM and chrMT not matched between fasta and gff files in smallrna_database|
+|||Enhanced: apply more strict criteria for parclip data|
+|20181109| v1.8.1|Enhanced: parclip_mirna_target can use smallRNA fasta file as seed source file.|
+|20180802| v1.8.0|Bugfix: smallrna_count with no_category option will ignore the reads with NTA. For parclip.|
+|20180619| v1.7.9|Enhanced: data_table will export protein_coding genes table.|
+|20180515| v1.7.8|Enhanced: smallrna_count can ignore reads in xml file. smallrna_count_table has noCategory option.|
+|20180423| v1.7.7|Bugfix: smallRNADatabaseBuilder throw exception for no miRNA database assigned.|
+|20171128| v1.7.6|Enhanced: output genome reads and too short reads for smallRNA counting.|
+|20170714| v1.7.5|Enhanced: chromosome_count can accept chromosome pattern.|
+|20170628| v1.7.4|Bugfix: parsing star mismatch with 'nM:i' tag.|
+|20170222| v1.7.3|Enhanced: gtf2bed can use "Name" as key.|
+|20170211| v1.7.2|Enhanced: smallrna_sequence_count_table: set exportContigDetails option to save time in large scale dataset.|
+|20170203| v1.7.1|Enhanced: smallrna_count: consider yRNA, snRNA, snoRNA and rRNA individually.|
+|||Enhanced: smallrna_count_table: output position files for each smallRNA category.|
+|20161213| v1.7.0|Enhanced: smallrna_count: consider tRNA non-templated addition in smallRNA counting.|
+|||Removed: FastqTrimmer: C# gzip library is not compatible with Gzip format from illumina, so this function may failed.|
+|||Bugfix: smallrna_count_table: underestimated the read count whose sequence may belongs to multiple queries (maybe one from original and another from NTA) in read count table|
+|20161202| v1.6.18|Enhanced: smallrna_sequence_count_table: group the top reads based on sequence similarity. The reads can be extended by maximum number of base per iteration.|
+|||Enhanced: smallrna_sequence_count_table: add option to extract specific sequences only.|
+|||Bugfix: chromosome_count_table: count error for read table. Failed when reading empty xml file.|
+|||Bugfix: chromosome_count_table: output sequence error for read mapped to reverse strand.|
+|20160822| v1.6.17|Enhanced: chromosome_count: add outputSequence option.|
+|||Enhanced: data_table: add option to not generate FPKM table.|
+|||Enhanced: chromosome_table: add option to output read contig table.|
+|||Enhanced: export snoRNA and snRNA percentage based position coverage image.|
+|20160822| v1.6.16|Enhanced: cnmops_merge: export cnvr file for depth visualization using ngsperl.|
+|||Enhanced: data_table: export feature_name just before count table.|
+|20160630| v1.6.15|Enhanced: chromosome_count: add KeepChrInName option.|
+|20160516| v1.6.14|Enhanced: smallrna_sequence_count_table: group the top reads based on sequence similarity. The reads with more than 90% overlap will be merged as group.|
+|20160510| v1.6.13|New feature: cnmops_merge: merge overlapped Cn.MOPS calls.|
+|20160405| v1.6.12|Enhanced: smallrna_count: buf fix for parsing aminoacid from some tRNA names.|
+|20160311| v1.6.11|Enhanced: chromosome_count: add namePattern as option for parsing category name from chromosome name.|
+|20160303| v1.6.10|Enhanced: smallrna_database: ignore the smallRNA coordinates in ensembl gtf file which don't locate in major chromosomes (for example, 1..22, X,Y,MT).|
+|20160302| v1.6.9|Bug fixed: chromosome_count|
+|20160226| v1.6.8|New feature: bam_sequence_count_table: build sequence count table from bam files and count files|
+|20160215| v1.6.7|Enhanced: smallRNA count/chromosome count|
+|20151222| v1.6.6|Enhanced: file_def can automatically adjust the name (for example, CMS-1 and CMS-123, CMS-1 will be auto filled as CMS-001).|
+|20151203| v1.6.5|Bug fixed: smallrna_count: the NTA reads will not be summed to total count when bam file contains mapped reads only. A tool smallrna_baminfo_fix can be used to fix old info files.|
+|20151105| v1.6.4|Bug fixed: smallrna_count: the total read count will be taken from count file when bam file contains mapped reads only|
 |||enhanced: fastq_identical: output query in order of count in dupcount file|
 |20151030| v1.6.3|New feature: database_reorder|
 |20150921| v1.6.2|New feature: smallrna_t2c_summary|

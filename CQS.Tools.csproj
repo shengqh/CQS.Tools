@@ -147,7 +147,9 @@
     <Content Include="template\clinical_patient_tcga.header.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="README.md" />
+    <None Include="README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="template\smallrna_category.r">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
