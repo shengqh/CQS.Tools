@@ -39,6 +39,7 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20191015| v1.8.6|Bugfix: topFeature may be missed in smallRNATable read table.|
 |20190917| v1.8.5|Enhanced: smallRNATable can export read table with corresponding features.|
 |20190304| v1.8.4|Enhanced: smallRNATable can export tRNA only (for tRH analysis).|
 |20181205| v1.8.3|Enhanced: treat mitochondria tRNA as mt_tRNA category.|
