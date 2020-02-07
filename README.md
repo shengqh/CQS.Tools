@@ -39,6 +39,8 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20200207| v1.8.9|Enhanced: compatible with lncRNA in hg38 gene annotation file.|
+|20191017| v1.8.8|Enhanced: output absolute position file for rRNA/snoRNA and other smallRNA.|
 |20191016| v1.8.7|Enhanced: output position file for other smallRNA.|
 |20191015| v1.8.6|Bugfix: topFeature may be missed in smallRNATable read table.|
 |20190917| v1.8.5|Enhanced: smallRNATable can export read table with corresponding features.|
