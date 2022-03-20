@@ -1,20 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using CQS.Properties;
-using CQS.TCGA.Microarray;
-using RCPA.Gui.Command;
-using CQS.BreastCancer;
+﻿using CQS.BreastCancer;
 using CQS.FileTemplate;
-using CQS.Genome.Cuffdiff;
-using CQS.Genome.Mirna;
-using CQS.Genome.Annotation;
+using CQS.Properties;
 using CQS.Sample;
+using RCPA.Gui.Command;
 
 namespace CQS.Tools
 {
