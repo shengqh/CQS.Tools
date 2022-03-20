@@ -41,6 +41,7 @@ User can download compiled version from [github](https://github.com/shengqh/CQS.
 
 |Date|Version|Description|
 |---|---|---|
+|20220319| v1.8.12|Enhanced: ChromosomeCountTable exports multiple count file based on columns in category file.|
 |20200211| v1.8.11|Bugfix: should not rename biotype lincRNA to rRNA based on gene name suffix.|
 |20200210| v1.8.10|Bugfix: compatible with lncRNA gene annotation file.|
 |20200207| v1.8.9|Enhanced: compatible with lncRNA in hg38 gene annotation file.|
